@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nosso Amor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #fff0f5;
+      color: #333;
+      padding: 30px;
+    }
+    img {
+      max-width: 300px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+    #tempo {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+    audio {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- FRASE ANTES DA FOTO -->
+  <h2>“❤️💕Desde o nosso primeiro momento você já tinha ganhado um pedacinho meu❤️💕.”</h2>
+
+  <!-- FOTO -->
+  <img src="Imagem do WhatsApp de 2025-07-23 à(s) 19.15.28_149a54f9.jpg" alt="Nós dois" />
+
+  <!-- CONTADOR DE TEMPO -->
+  <h3>"❤️💕Sei que não é tão boa com datas, e tudo bem, aqui pra sempre que se perguntar de novo, obrigado por estar sempre comigo, eu te amo a bem mais tempo que o relogio diz, mas ele conta a partir do dia que você me fez a pessoa mais feliz e aceitou ser minha, Eu te amo tonha e sempre te amarei, pode sempre contar comigo pra tudo espero que saiba o quanto você é importante pra mim❤️💕":</h3>
+  <div id="tempo"></div>
+
+  
+
+  <script>
+    const inicio = new Date('2025-03-05T19:00:00');
+
+    function atualizarTempo() {
+      const agora = new Date();
+      let diff = agora - inicio;
+
+      const segundosTotais = Math.floor(diff / 1000);
+      const minutosTotais = Math.floor(segundosTotais / 60);
+      const horasTotais = Math.floor(minutosTotais / 60);
+      const diasTotais = Math.floor(horasTotais / 24);
+      const mesesTotais = Math.floor(diasTotais / 30.44); // média de dias no mês
+
+      const anos = Math.floor(mesesTotais / 12);
+      const meses = mesesTotais % 12;
+      const dias = Math.floor(diasTotais % 30.44);
+      const horas = horasTotais % 24;
+      const minutos = minutosTotais % 60;
+      const segundos = segundosTotais % 60;
+
+      document.getElementById('tempo').textContent = 
+        `${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+    }
+
+    atualizarTempo();
+    setInterval(atualizarTempo, 1000);
+  </script>
+</body>
+</html>
